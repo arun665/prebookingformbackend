@@ -41,79 +41,14 @@ app.get('/', function (req, res) {
 })
 
  
-app.get('/sendmail', function (req, res) {
-    
-    var nodemailer = require('nodemailer');
- 
-// create reusable transporter object using the default SMTP transport
-
- transporter = nodemailer.createTransport({
-    service:'gmail',
-    auth:{
-        user:'arunsharmamoh@gmail.com',
-        pass:'varunarun181'
-    }
-});
- 
-// setup e-mail data with unicode symbols
-mailOptions = {
-    from: '"Fred Foo 👥" <arunsharmamoh@gmail.com>', // sender address
-    to: 'arunsharmamoh@gmail.com', // list of receivers
-    subject: 'Hello ✔', // Subject line
-    text: 'Hello world 🐴', // plaintext body
-    html: '<b>Hello world 🐴</b>' // html body
-};
- 
-// send mail with defined transport object
-transporter.sendMail(mailOptions, function(error, info){
-    if(error){
-        res.send(error);
-        console.log("error")
-    }
-    console.log('Message sent: ' + info.response);
-
-});
-
-
-
-var transporter = nodemailer.createTransport({
-    service:'gmail',
-    auth:{
-        user:'arunsharmamoh@gmail.com',
-        pass:'varunarun181'
-    }
-});
- 
-// setup e-mail data with unicode symbols
-var mailOptions = {
-    from: '"Fred Foo 👥" <arunsharmamoh@gmail.com>', // sender address
-    to: 'arun0318.cse19@chitkara.edu.in', // list of receivers
-    subject: 'Hello ✔', // Subject line
-    text: 'Hello world 🐴', // plaintext body
-    html: '<b>Hello world 🐴</b>' // html body
-};
- 
-// send mail with defined transport object
-transporter.sendMail(mailOptions, function(error, info){
-    if(error){
-        res.send(error);
-        console.log("error")
-    }
-    console.log('Message sent: ' + info.response);
-
-    res.send("both mail sended");
-});
 
 
 
 
 
 
-
-
-  })
  
 
-app.listen(preocess.env.PORT||5000,function(res){
+app.listen(process.env.PORT||5000,function(res){
     console.log("server running on 5000");
 });
