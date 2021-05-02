@@ -58,7 +58,7 @@ else{
 
     
     
-let mailDetails = {
+mailDetails = {
     from: '<arunsharmamoh@gmail.com>',
     to: 'arun0318.cse19@chitkara.edu.in',
     subject: 'Pre-Booking Form filled',
