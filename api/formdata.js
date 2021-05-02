@@ -60,7 +60,7 @@ else{
     
 mailDetails = {
     from: '<arunsharmamoh@gmail.com>',
-    to: 'arun0318.cse19@chitkara.edu.in',
+    to: 'sales@scratchnest.com , arun0318.cse19@chitkara.edu.in',
     subject: 'Pre-Booking Form filled',
     html: '<h1> hi amit bhatti </h1> <h3>Some one filled the form , here are the details of him</h3> <br> name=>'+name+'<br> email=>'+email+'<br> address=>'+address+'<br> Phone=>'+number+'<br> Company=>'+company+'<br>quantity=>'+quantity+'<br>'
 };
