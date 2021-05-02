@@ -34,16 +34,16 @@ else{
     let mailTransporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'arunsharmamoh@gmail.com',
-            pass: 'Arun5207@'
+            user: 'sctratchnestqueries@gmail.com',
+            pass: 'P@ssword@**@!'
         }
     });
       
     let mailDetails = {
-        from: '<arunsharmamoh@gmail.com>',
+        from: '<sctratchnestqueries@gmail.com>',
         to: email,
-        subject: 'Test mail',
-        text: 'Node.js testing mail for GeeksforGeeks'
+        subject: 'Thanks for choosing Scratchnest!!!',
+        html: '<div> <h1> Hi '+ name + ' 💯🤝✋ ,</h1> <br> <h3> Thank you very much for choosing ScratchNest!. We are delighted to have you on board!</h3> <br> <h3> We are sure you want to start using our product as soon as possible , someone from our team will contact you within 24 working hours. </h3> <br> <h3> product Link--> https://scratchnest-ff76c.web.app/  </h3> </div>'
     };
       
     mailTransporter.sendMail(mailDetails, function(err, data) {
@@ -59,10 +59,10 @@ else{
     
     
 mailDetails = {
-    from: '<arunsharmamoh@gmail.com>',
+    from: '<sctratchnestqueries@gmail.com>',
     to: 'sales@scratchnest.com , arun0318.cse19@chitkara.edu.in',
     subject: 'Pre-Booking Form filled',
-    html: '<h1> hi amit bhatti </h1> <h3>Some one filled the form , here are the details of him</h3> <br> name=>'+name+'<br> email=>'+email+'<br> address=>'+address+'<br> Phone=>'+number+'<br> Company=>'+company+'<br>quantity=>'+quantity+'<br>'
+    html: '<div ><h1> Hi Team 💯✋🐣 </h1> <h3>Some one filled the form , here are the details of him</h3> <br> name=>'+name+'<br> email=>'+email+'<br> address=>'+address+'<br> Phone=>'+number+'<br> Company=>'+company+'<br>quantity=>'+quantity+'<br></div>'
 };
   
 mailTransporter.sendMail(mailDetails, function(err, data) {
