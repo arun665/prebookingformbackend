@@ -27,6 +27,9 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.get("/",function(req,res){
+  res.send("server started");
+})
  app.use("/api",formDataApi);
 
  
@@ -109,11 +112,7 @@ transporter.sendMail(mailOptions, function(error, info){
 
 
   })
-   
-  if(process.env.NODE_ENV == "production"){
-    app.use(express.static("myapp/build"));
-  }
-  
+ 
 
 app.listen(preocess.env.PORT||5000,function(res){
     console.log("server running on 5000");
