@@ -52,16 +52,17 @@ else{
         } else {
             console.log('Email sent successfully');
             res.send("both mail send");
+        }
     
-}
+    });
 
-
+    
     
 let mailDetails = {
     from: '<arunsharmamoh@gmail.com>',
     to: 'arun0318.cse19@chitkara.edu.in',
     subject: 'Pre-Booking Form filled',
-    html: '<h1> hi amit bhatti </h1> <h3>Some one filled the form , here are the details of him</h3> <br> name:'+name+'<br> email:'+email+'<br> address:'+address+'<br> Phone:'+number+'<br> Company:'+company+'<br>'; 
+    html: '<h1> hi amit bhatti </h1> <h3>Some one filled the form , here are the details of him</h3> <br> name:'+name+'<br> email:'+email+'<br> address:'+address+'<br> Phone:'+number+'<br> Company:'+company+'<br>'
 };
   
 mailTransporter.sendMail(mailDetails, function(err, data) {
