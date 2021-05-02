@@ -51,7 +51,7 @@ else{
             console.log('Error Occurs');
         } else {
             console.log('Email sent successfully');
-            res.send("both mail send");
+        
         }
     
     });

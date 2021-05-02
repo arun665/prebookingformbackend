@@ -54,9 +54,13 @@ mailTransporter.sendMail(mailDetails, function(err, data) {
         console.log('Error Occurs');
     } else {
         console.log('Email sent successfully');
-   
+   res.send("mail sent successfullt");
       }
 });
+
+
+
+
 })
 
 
