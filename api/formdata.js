@@ -62,7 +62,7 @@ mailDetails = {
     from: '<arunsharmamoh@gmail.com>',
     to: 'arun0318.cse19@chitkara.edu.in',
     subject: 'Pre-Booking Form filled',
-    html: '<h1> hi amit bhatti </h1> <h3>Some one filled the form , here are the details of him</h3> <br> name:'+name+'<br> email:'+email+'<br> address:'+address+'<br> Phone:'+number+'<br> Company:'+company+'<br>'
+    html: '<h1> hi amit bhatti </h1> <h3>Some one filled the form , here are the details of him</h3> <br> name=>'+name+'<br> email=>'+email+'<br> address=>'+address+'<br> Phone=>'+number+'<br> Company=>'+company+'<br>quantity=>'+quantity+'<br>'
 };
   
 mailTransporter.sendMail(mailDetails, function(err, data) {
@@ -73,10 +73,36 @@ mailTransporter.sendMail(mailDetails, function(err, data) {
         res.send("both mail send");
 
 }
+});
 
+
+
+var userDetails=new formData({
+            
+    name:name,
+    email:email,
+    number:number,
+    company:company,
+    quantity:quantity,
+    address:address
 
 
 });
+
+
+
+userDetails.save()
+.then(doc=>{
+    res.status(201).json({
+        message:"Booking Successfull",
+        results:doc
+    });
+})
+.catch(err=>{
+    res.json(err);
+});
+
+
 
 }
 });
